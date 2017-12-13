@@ -5,7 +5,7 @@
     android:id="@+id/btnPauseGPS"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.georg.gpsapp.MainActivity">
+    tools:context="com.example.georg.gpsapp.GPSAPlant">
 
     <TextView
         android:id="@+id/textView"
@@ -102,8 +102,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/lblPlantName"
-        android:layout_alignEnd="@+id/lblLongtitudeValue"
-        android:layout_alignRight="@+id/lblLongtitudeValue"
+        android:layout_toEndOf="@+id/lblGPSAge"
+        android:layout_toRightOf="@+id/lblGPSAge"
         android:text="@string/lblBlank" />
 
     <TextView
@@ -141,7 +141,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button"
+            android:onClick="btnShowSavedClicked"
+            android:text="@string/lblShowSaved"
             tools:text="@string/lblShowSaved" />
 
         <Button
@@ -149,7 +150,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button"
+            android:text="@string/lblTakePhoto"
             tools:text="@string/lblTakePhoto" />
     </LinearLayout>
 
@@ -160,7 +161,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/linearLayout"
-        android:text="Button"
+        android:text="@string/lblSaved"
         tools:text="@string/lblSaved" />
 
     <AutoCompleteTextView
@@ -168,8 +169,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/lblDescription"
-        android:layout_alignLeft="@+id/actPlantName"
-        android:layout_alignStart="@+id/actPlantName"
+        android:layout_alignRight="@+id/lblDescription"
+
         android:text="@string/lblBlank" />
 
     <AutoCompleteTextView

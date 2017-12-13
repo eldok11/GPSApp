@@ -1,18 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnPauseGPS"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.georg.gpsapp.MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/lblLatitude"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/btnPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="58dp"
+        android:layout_marginRight="58dp"
+        android:onClick="btnPausedGPSClicked"
+        android:text="@string/lblPauseGPS"
+        tools:layout_editor_absoluteX="254dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/lblLongtitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_below="@+id/btnPause"
+        android:text="@string/lblLongtitude" />
+
+    <TextView
+        android:id="@+id/lblLatitudeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:layout_toEndOf="@+id/lblLongtitude"
+        android:layout_toRightOf="@+id/lblLongtitude"
+        android:text="TextView"
+        tools:text="@string/lblZero" />
+
+    <TextView
+        android:id="@+id/lblLongtitudeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblLatitudeValue"
+        android:layout_alignStart="@+id/lblLatitudeValue"
+        android:layout_alignTop="@+id/lblLongtitude"
+        android:text="@string/lblZero" />
+
+    <Chronometer
+        android:id="@+id/chrGPSAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lblGPSAge"
+        android:layout_alignBottom="@+id/lblGPSAge"
+        android:layout_alignLeft="@+id/lblLongtitudeValue"
+        android:layout_alignStart="@+id/lblLongtitudeValue" />
+
+    <TextView
+        android:id="@+id/lblGPSAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/lblLongtitude"
+        android:layout_alignRight="@+id/lblLongtitude"
+        android:layout_below="@+id/lblLongtitude"
+        android:layout_marginTop="17dp"
+        android:text="@string/lblGPSAge" />
+
+    <TextView
+        android:id="@+id/lblPlantName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblLongtitude"
+        android:layout_alignStart="@+id/lblLongtitude"
+        android:layout_below="@+id/lblGPSAge"
+        android:layout_marginTop="39dp"
+        android:text="@string/lblPlantName" />
+
+    <AutoCompleteTextView
+        android:id="@+id/actPlantName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/lblPlantName"
+        android:layout_alignEnd="@+id/lblLongtitudeValue"
+        android:layout_alignRight="@+id/lblLongtitudeValue"
+        android:text="@string/lblBlank" />
+
+    <TextView
+        android:id="@+id/lblLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblLongtitude"
+        android:layout_alignStart="@+id/lblLongtitude"
+        android:layout_below="@+id/lblPlantName"
+        android:layout_marginTop="39dp"
+        android:text="@string/lblLocation" />
+
+
+    <TextView
+        android:id="@+id/lblDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblLongtitude"
+        android:layout_alignStart="@+id/lblLongtitude"
+        android:layout_below="@+id/lblLocation"
+        android:layout_marginTop="39dp"
+        android:text="@string/lblDescription" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/lblDescription"
+        android:id="@+id/linearLayout">
+
+        <Button
+            android:id="@+id/btnShowSaved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button"
+            tools:text="@string/lblShowSaved" />
+
+        <Button
+            android:id="@+id/btnTakePhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button"
+            tools:text="@string/lblTakePhoto" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSaved"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout"
+        android:text="Button"
+        tools:text="@string/lblSaved" />
+
+    <AutoCompleteTextView
+        android:id="@+id/actLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lblDescription"
+        android:layout_alignLeft="@+id/actPlantName"
+        android:layout_alignStart="@+id/actPlantName"
+        android:text="@string/lblBlank" />
+
+    <AutoCompleteTextView
+        android:id="@+id/actDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/lblDescription"
+        android:layout_alignLeft="@+id/chrGPSAge"
+        android:layout_alignStart="@+id/chrGPSAge"
+        android:text="@string/lblBlank" />
+
+</RelativeLayout>

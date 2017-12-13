@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">GPSApp</string>
+    <string name="lblPauseGPS">Pause</string>
+    <string name="lblLatitude">Latitude</string>
+    <string name="lblLongtitude">Longtitude</string>
+    <string name="lblZero">0.0</string>
+    <string name="lblGPSAge">GPSAge</string>
+    <string name="lblPlantName">PlantName</string>
+    <string name="lblBlank" />
+    <string name="lblShowSaved">Show Saved</string>
+    <string name="lblTakePhoto">Take Photo</string>
+    <string name="lblSaved">Saved</string>
+    <string name="lblLocation">Location</string>
+    <string name="lblDescription">Description</string>
 </resources>

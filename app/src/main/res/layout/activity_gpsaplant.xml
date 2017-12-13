@@ -150,6 +150,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="btnTagePhotoClicked"
             android:text="@string/lblTakePhoto"
             tools:text="@string/lblTakePhoto" />
     </LinearLayout>
@@ -181,5 +182,14 @@
         android:layout_alignLeft="@+id/chrGPSAge"
         android:layout_alignStart="@+id/chrGPSAge"
         android:text="@string/lblBlank" />
+
+    <ImageView
+        android:id="@+id/imgSpecimenphoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btnSaved" />
 
 </RelativeLayout>

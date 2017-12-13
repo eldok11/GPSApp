@@ -24,6 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:background="@drawable/bluebutton"
         android:id="@+id/btnPause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -137,6 +138,7 @@
         android:id="@+id/linearLayout">
 
         <Button
+            android:background="@drawable/bluebutton"
             android:id="@+id/btnShowSaved"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -146,6 +148,7 @@
             tools:text="@string/lblShowSaved" />
 
         <Button
+            android:background="@drawable/bluebutton"
             android:id="@+id/btnTakePhoto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -162,6 +165,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/linearLayout"
+        android:background="@drawable/bluebutton"
         android:text="@string/lblSaved"
         tools:text="@string/lblSaved" />
 
